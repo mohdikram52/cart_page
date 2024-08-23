@@ -1,0 +1,344 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: white;
+  margin: 20px;
+  padding: 20px 60px 20px 60px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+}
+
+h1 {
+  color: #e25d80;
+  font-size: 24px;
+}
+
+.offer-box {
+  margin: 20px 0;
+}
+
+.offer {
+  border: 2px solid #eee;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  margin-bottom: 10px;
+  position: relative;
+  transition: border-color 0.3s;
+}
+
+.offer.offer-selected {
+  border-color: #e25d80;
+  background-color: #f6ecef;
+}
+
+.offer-value {
+  display: flex;
+}
+
+.offer-value label {
+  display: flex;
+  width: 250px;
+  align-items: center;
+  margin: 10px;
+}
+
+.offer input[type="radio"] {
+  margin-right: 10px;
+  display: flex;
+  accent-color: #e25d80;
+}
+
+.discount {
+  background-color: #e25d80;
+  color: white;
+  font-size: 14px;
+  padding: 10px 20px 0px 20px;
+  margin-right: 10px;
+  border-radius: 11px 0px 0px 11px;
+  width: auto;
+  text-align: center;
+}
+
+.discount.hidden {
+  display: none;
+}
+
+.offer-details {
+  flex-grow: 1;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.offer-details .price {
+  font-weight: bold;
+  display: inline-block;
+}
+
+.most-popular {
+  color: #e25d80;
+  font-weight: bold;
+  font-size: 12px;
+  position: absolute;
+  right: 10px;
+  top: 20px;
+}
+
+.discount-text {
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #e25d80;
+  padding: 2px 5px;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #bbb;
+  font-size: 12px;
+  margin-left: 2px;
+}
+
+.product-options {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.option-name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.option-name span {
+  margin: 5px 9px 5px 48px;
+}
+
+.option {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-left: 30px;
+}
+
+.option span {
+  display: block;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.option select {
+  width: 22%;
+  padding: 5px;
+  margin-right: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.total {
+  margin: 20px 0;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.FD {
+  color: #e25d80;
+}
+
+.add-to-cart {
+  background-color: #e25d80;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
+  background-color: #ff5f8a;
+}
+
+.powered-by {
+  color: #ccc;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .offer-value label {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .offer input[type="radio"] {
+    margin-bottom: 10px;
+  }
+
+  .offer-details {
+    text-align: left;
+    margin-left: 0;
+  }
+
+  .most-popular {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .discount {
+    padding: 8px 3px;
+    font-size: 12px;
+    min-width: 60px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .offer-value {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .offer-value label {
+    width: 100%;
+    margin: 0;
+  }
+
+  .discount {
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+
+    font-size: 12px;
+    min-width: auto;
+    margin-right: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .offer-details {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .offer-details .price {
+    display: block;
+  }
+
+  .product-options .option {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .option select {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .option-name span {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 240px) {
+  .container {
+    padding: 10px;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .offer-value {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .offer-value label {
+    margin: 0;
+    width: 100%;
+  }
+
+  .discount {
+    padding: 5px 2px;
+    font-size: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: center;
+    margin-right: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .offer-details {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .offer-details .price {
+    font-size: 12px;
+  }
+
+  .most-popular {
+    position: static;
+    font-size: 10px;
+    margin-top: 5px;
+  }
+
+  .product-options .option {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .option select {
+    width: 100%;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .total {
+    font-size: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .add-to-cart {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .powered-by {
+    font-size: 10px;
+    margin-top: 5px;
+  }
+}
